@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+</head>
+<body>
+
+<!-- Button to open the popup -->
+<button id="openPopup">Open Popup</button>
+
+<!-- Popup dialog -->
+<dialog id="popup">
+    <h2>sample pop message</h2>
+    <p>hello hari iam pop.</p>
+    <button id="closePopup">Close</button>
+</dialog>
+
+<script>
+    // Get references to the popup and button elements
+    const popup = document.getElementById('popup');
+    const openButton = document.getElementById('openPopup');
+    const closeButton = document.getElementById('closePopup');
+
+    // Open the popup when the button is clicked
+    openButton.addEventListener('click', function() {
+        popup.showModal();
+    });
+
+    // Close the popup when the close button is clicked
+    closeButton.addEventListener('click', function() {
+        popup.close();
+    });
+</script>
+
+</body>
+</html>
